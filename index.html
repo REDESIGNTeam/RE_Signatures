@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RE Signatures</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+
+    <style rel="stylesheet">
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            font-family: 'Quicksand', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        #left-bar {
+            padding: 2em;
+            border-right: 1px solid #dddddd;
+        }
+
+        #left-bar input {
+            padding: 1em;
+            margin-bottom: 2em;
+            border: 1px solid #dddddd;
+            width: 25em;
+        }
+
+        #right-bar {
+            padding: 2em;
+        }
+
+        #card-bg {
+            background-color: white;
+            padding: 3em;
+            width: 700px;
+            box-shadow: 0 0 1em #eeeeee;
+        }
+
+        #name {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #divider {
+            border-right: 1px solid #ddd;
+            margin-right: 1em;
+            margin-left: 1em;
+            height: 2em;
+        }
+
+        #designation {
+            font-size: x-large;
+            color: #aaaaaa;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .pt-10 {
+            padding-top: 1em;
+        }
+
+        .pl-5 {
+            padding-left: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="left-bar" class="flex-column">
+    <input placeholder="Name" onkeyup="set_name(this)"/>
+
+    <input placeholder="Designation" onkeyup="set_designation(this)"/>
+
+    <input placeholder="Phone" onkeyup="set_phone(this)"/>
+
+    <input placeholder="Email" onkeyup="set_email(this)"/>
+
+    <input placeholder="Website" onkeyup="set_website(this)"/>
+
+    <input placeholder="Location" onkeyup="set_location(this)"/>
+
+</div>
+
+<div id="right-bar">
+    <div id="card-bg" class="flex-column">
+        <div class="flex-row align-center">
+            <div class="flex-grow flex-row align-center">
+                <div id="name">Phil Sanginario</div>
+                <div id="divider"></div>
+                <div id="designation">CEO</div>
+            </div>
+            <div>
+                <img src="assets/logo-redesign-trust.svg" height="20"/>
+            </div>
+        </div>
+
+        <div class="flex-row">
+            <div class="flex-column">
+                <div class="flex-row align-center pt-10">
+                    <img src="assets/icon-phone.png" height="20"/>
+                    <div id="phone" class="pl-5">
+                        +897 567 890
+                    </div>
+                </div>
+
+                <div class="flex-row align-center pt-10">
+                    <img src="assets/icon-mail.png" height="20"/>
+                    <div id="email" class="pl-5">
+                        phil@redesign-group.com
+                    </div>
+                </div>
+
+                <div class="flex-row align-center pt-10">
+                    <img src="assets/icon-website.png" height="20"/>
+                    <div id="website" class="pl-5">
+                        www.redesign-group.com
+                    </div>
+                </div>
+
+                <div class="flex-row align-center pt-10">
+                    <img src="assets/icon-location.png" height="20"/>
+                    <div id="location" class="pl-5">
+                        711 Street, Suite 233, Stateville, USA
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src=""
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function set_name(input) {
+        document.getElementById('name').innerText = input.value
+    }
+
+    function set_designation(input) {
+        document.getElementById('designation').innerText = input.value
+    }
+
+    function set_phone(input) {
+        document.getElementById('phone').innerText = input.value
+    }
+
+    function set_email(input) {
+        document.getElementById('email').innerText = input.value
+    }
+
+    function set_website(input) {
+        document.getElementById('website').innerText = input.value
+    }
+
+    function set_location(input) {
+        document.getElementById('location').innerText = input.value
+    }
+
+    function set_calendly(input) {
+        document.getElementById('calendly').href = input.value
+    }
+
+    function set_linkedin(input) {
+        document.getElementById('linkedin').href = input.value
+    }
+
+</script>
+
+
+</body>
+</html>
