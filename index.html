@@ -16,7 +16,8 @@
             padding: 0;
             display: flex;
             flex-direction: row;
-            font-family: 'Quicksand', sans-serif;
+            font-size: 12px;
+            font-family: 'Arial', 'sans-serif';
             background-color: #f5f5f5;
         }
 
@@ -32,6 +33,12 @@
             width: 25em;
         }
 
+        #left-bar select {
+            padding: 1em;
+            margin-bottom: 2em;
+            border: 1px solid #dddddd;
+        }
+
         #right-bar {
             padding: 2em;
         }
@@ -39,12 +46,12 @@
         #card-bg {
             background-color: white;
             padding: 3em;
-            width: 700px;
+            width: 500px;
             box-shadow: 0 0 1em #eeeeee;
         }
 
         #name {
-            font-size: xx-large;
+            font-size: x-large;
             font-weight: bold;
         }
 
@@ -56,8 +63,21 @@
         }
 
         #designation {
-            font-size: x-large;
+            font-size: large;
             color: #aaaaaa;
+        }
+
+        #copy-button {
+            padding: 1em;
+            border: none;
+            background-color: #436af3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #copy-button:active {
+            background-color: #3057d9;
         }
 
         .flex-row {
@@ -91,6 +111,12 @@
 <body>
 
 <div id="left-bar" class="flex-column">
+    <select onchange="set_logo()">
+        <option value="logo-redesign.svg">Redesign Group</option>
+        <option value="logo-redesign-trust.svg">Redesign Trust</option>
+        <option value="logo-redesign-it.svg">Redesign IT</option>
+    </select>
+
     <input placeholder="Name" onkeyup="set_name(this)"/>
 
     <input placeholder="Designation" onkeyup="set_designation(this)"/>
@@ -103,6 +129,8 @@
 
     <input placeholder="Location" onkeyup="set_location(this)"/>
 
+    <button id="copy-button" onclick="copy_card()">COPY</button>
+
 </div>
 
 <div id="right-bar">
@@ -114,35 +142,40 @@
                 <div id="designation">CEO</div>
             </div>
             <div>
-                <img src="assets/logo-redesign-trust.svg" height="20"/>
+                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/logo-redesign.svg"
+                     height="15"/>
             </div>
         </div>
 
         <div class="flex-row">
             <div class="flex-column">
                 <div class="flex-row align-center pt-10">
-                    <img src="assets/icon-phone.png" height="20"/>
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-phone.png"
+                         height="20"/>
                     <div id="phone" class="pl-5">
                         +897 567 890
                     </div>
                 </div>
 
                 <div class="flex-row align-center pt-10">
-                    <img src="assets/icon-mail.png" height="20"/>
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-mail.png"
+                         height="20"/>
                     <div id="email" class="pl-5">
                         phil@redesign-group.com
                     </div>
                 </div>
 
                 <div class="flex-row align-center pt-10">
-                    <img src="assets/icon-website.png" height="20"/>
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-website.png"
+                         height="20"/>
                     <div id="website" class="pl-5">
                         www.redesign-group.com
                     </div>
                 </div>
 
                 <div class="flex-row align-center pt-10">
-                    <img src="assets/icon-location.png" height="20"/>
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-location.png"
+                         height="20"/>
                     <div id="location" class="pl-5">
                         711 Street, Suite 233, Stateville, USA
                     </div>
@@ -150,7 +183,7 @@
             </div>
 
             <div>
-                <img src=""
+
             </div>
 
         </div>
@@ -158,6 +191,10 @@
 </div>
 
 <script type="text/javascript">
+    function set_logo(select) {
+        document.getElementById('logo').src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/" + select.value;
+    }
+
     function set_name(input) {
         document.getElementById('name').innerText = input.value
     }
@@ -188,6 +225,12 @@
 
     function set_linkedin(input) {
         document.getElementById('linkedin').href = input.value
+    }
+
+    function copy_card() {
+        const elem = document.getElementById('card-bg');
+        elem.select();
+        document.execCommand('copy');
     }
 
 </script>
