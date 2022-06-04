@@ -83,26 +83,26 @@
 
 <div id="left-bar" class="flex-column">
     <select onchange="set_logo(this)">
-        <option value="logo-redesign.svg">Redesign Group</option>
+        <option value="logo-redesign.svg" selected="selected">Redesign Group</option>
         <option value="logo-redesign-trust.svg">Redesign Trust</option>
         <option value="logo-redesign-it.svg">Redesign IT</option>
     </select>
 
-    <input placeholder="Name" onkeyup="set_name(this)"/>
+    <input placeholder="Name" onkeyup="set_name(this)" value="Demo User"/>
 
-    <input placeholder="Designation" onkeyup="set_designation(this)"/>
+    <input placeholder="Designation" onkeyup="set_designation(this)" value="CEO"/>
 
-    <input placeholder="Phone" onkeyup="set_phone(this)"/>
+    <input placeholder="Phone" onkeyup="set_phone(this)" value="+1 (234) 567-8901"/>
 
-    <input placeholder="Email" onkeyup="set_email(this)"/>
+    <input placeholder="Email" onkeyup="set_email(this)" value="demo@redesign-group.com"/>
 
     <input placeholder="Website" onkeyup="set_website(this)" value="www.redesign-group.com"/>
 
-    <input placeholder="Location" onkeyup="set_location(this)"/>
+    <input placeholder="Location" onkeyup="set_location(this)" value="Los Angeles, California, USA"/>
 
-    <input placeholder="Calendly Profile Link" onkeyup="set_calendly(this)"/>
+    <input placeholder="Calendly Profile Link" onkeyup="set_calendly(this)" value="https://www.calendly.com"/>
 
-    <input placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)"/>
+    <input placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)" value="https://www.linkedin.com"/>
 
     <button id="copy-button" onclick="copy_card()">COPY</button>
 
