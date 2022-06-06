@@ -104,6 +104,8 @@
 
     <input placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)" value="https://www.linkedin.com"/>
 
+    <input placeholder="Zoom Link" onkeyup="set_zoom(this)" value="https://www.zoom.us/"/>
+
     <button id="copy-button" onclick="copy_card()">COPY</button>
 
 </div>
@@ -113,7 +115,7 @@
     <table id="card">
         <tbody>
         <tr>
-            <td colspan="4" style="padding-bottom: 2em">
+            <td colspan="5" style="padding-bottom: 2em">
                 <table>
                     <tr>
                         <td id="name" colspan="2">Demo User</td>
@@ -132,21 +134,21 @@
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-phone.svg"
                      width="15"/>
             </td>
-            <td id="phone" colspan="3">+1 (123) 456-7890</td>
+            <td id="phone" colspan="4">+1 (123) 456-7890</td>
         </tr>
         <tr>
             <td>
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-mail.svg"
                      width="15"/>
             </td>
-            <td id="email" colspan="3">demo@redesign-group.com</td>
+            <td id="email" colspan="4">demo@redesign-group.com</td>
         </tr>
         <tr>
             <td>
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-website.svg"
                      width="15"/>
             </td>
-            <td id="website" colspan="3">www.redesign-group.com</td>
+            <td id="website" colspan="4">www.redesign-group.com</td>
         </tr>
         <tr>
             <td>
@@ -154,7 +156,6 @@
                      width="15"/>
             </td>
             <td id="location">Los Angeles, California, USA</td>
-
             <td style="text-align: right; width: 25px">
                 <a id="calendly" href="https://www.calendly.com" target="_blank">
                     <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-calendly.svg"
@@ -164,6 +165,12 @@
             <td style="text-align: right; width: 25px">
                 <a id="linkedin" href="https://www.linkedin.com" target="_blank">
                     <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-linkedin.svg"
+                         width="20"/>
+                </a>
+            </td>
+            <td style="text-align: right; width: 25px">
+                <a id="zoom" href="https://www.zoom.us" target="_blank">
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-zoom.svg"
                          width="20"/>
                 </a>
             </td>
@@ -207,6 +214,10 @@
 
     function set_linkedin(input) {
         document.getElementById('linkedin').href = input.value
+    }
+
+    function set_zoom(input) {
+        document.getElementById('zoom').href = input.value
     }
 
     function copy_card() {
