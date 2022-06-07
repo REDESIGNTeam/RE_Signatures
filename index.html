@@ -185,7 +185,14 @@
 
 <script type="text/javascript">
     function set_logo(select) {
-        document.getElementById('logo').src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/" + select.value;
+        var element = document.getElementById('logo')
+        element.src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/" + select.value;
+
+        if (select.value === 'logo-artistanywhere.svg') {
+            element.height = 25
+        } else {
+            element.height = 15
+        }
     }
 
     function set_name(input) {
