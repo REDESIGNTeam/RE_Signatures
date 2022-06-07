@@ -86,25 +86,29 @@
         <option value="logo-redesign.svg" selected="selected">Redesign Group</option>
         <option value="logo-redesign-trust.svg">Redesign Trust</option>
         <option value="logo-redesign-it.svg">Redesign IT</option>
+        <option value="logo-artistanywhere.svg">Artistanywhere</option>
     </select>
 
-    <input placeholder="Name" onkeyup="set_name(this)" value="Demo User"/>
+    <input placeholder="Full Name" onkeyup="set_name(this)"/>
 
-    <input placeholder="Designation" onkeyup="set_designation(this)" value="CEO"/>
+    <input placeholder="Job Title" onkeyup="set_designation(this)"/>
 
-    <input placeholder="Phone" onkeyup="set_phone(this)" value="+1 (234) 567-8901"/>
+    <input placeholder="Work Cell" onkeyup="set_phone(this)"/>
 
-    <input placeholder="Email" onkeyup="set_email(this)" value="demo@redesign-group.com"/>
+    <input placeholder="Work Email" onkeyup="set_email(this)"/>
 
-    <input placeholder="Website" onkeyup="set_website(this)" value="www.redesign-group.com"/>
+    <input placeholder="Website" onkeyup="set_website(this)" value="redesign-group.com"/>
 
-    <input placeholder="Location" onkeyup="set_location(this)" value="Los Angeles, California, USA"/>
+    <input placeholder="Location" onkeyup="set_location(this)" value="United States | Canada | Great Britain | Europe"/>
 
-    <input placeholder="Calendly Profile Link" onkeyup="set_calendly(this)" value="https://www.calendly.com"/>
+    <input placeholder="Calendly Profile Link" onkeyup="set_calendly(this)"
+           value="https://www.calendly.com/(your extension)"/>
 
-    <input placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)" value="https://www.linkedin.com"/>
+    <input placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)"
+           value="https://www.linkedin.com/(your extension)"/>
 
-    <input placeholder="Zoom Link" onkeyup="set_zoom(this)" value="https://www.zoom.us/"/>
+    <input placeholder="Zoom Link" onkeyup="set_zoom(this)"
+           value="https://www.zoom.us/(your extension)"/>
 
     <button id="copy-button" onclick="copy_card()">COPY</button>
 
@@ -148,14 +152,14 @@
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-website.svg"
                      width="15"/>
             </td>
-            <td id="website" colspan="4">www.redesign-group.com</td>
+            <td id="website" colspan="4">redesign-group.com</td>
         </tr>
         <tr>
             <td>
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-location.svg"
                      width="15"/>
             </td>
-            <td id="location">Los Angeles, California, USA</td>
+            <td id="location">United States | Canada | Great Britain | Europe</td>
             <td style="text-align: right; width: 25px">
                 <a id="calendly" href="https://www.calendly.com" target="_blank">
                     <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-calendly.svg"
