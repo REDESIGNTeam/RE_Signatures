@@ -117,18 +117,16 @@
                         <td colspan="3" style="padding-bottom: 24px">
                             <table style="width: 100%">
                                 <tr>
-                                    <td id="name"
-                                        style="font-size: 24px; border-right: 2px solid #dddddd; padding-right: 12px"
-                                        colspan="2">Demo User
+                                    <td style="border-right: 2px solid #dddddd; padding-right: 12px">
+                                        <span id="name" style="font-size: 24px">Demo User</span>
                                     </td>
-                                    <td id="designation"
-                                        style="font-size: 18px; color: #aaaaaa; padding-left: 12px; padding-right: 100px">
-                                        CEO
+                                    <td style="color: #aaaaaa; padding-left: 12px; text-align: center">
+                                        <span id="designation" style="font-size: 18px">CEO</span>
                                     </td>
-                                    <td style="text-align: right">
+                                    <td style="text-align: right; padding-top: 2px; padding-left: 20px" id="logo-td">
                                         <img id="logo"
                                              src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/logo-redesign.png"
-                                             height="15"/>
+                                             height="13"/>
                                     </td>
                                 </tr>
                             </table>
@@ -161,21 +159,21 @@
                                  width="15"/>
                         </td>
                         <td id="location">United States | Canada | Great Britain | Europe</td>
-                        <td style="text-align: right;">
+                        <td style="text-align: right; padding-left: 10px">
                             <a id="linkedin" href="https://www.linkedin.com" target="_blank"
-                               style="margin-left: 20px; text-decoration: none">
+                               style="margin-left: 10px; text-decoration: none">
                                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-linkedin.png"
-                                     width="20"/>
+                                     width="15"/>
                             </a>
                             <a id="calendly" href="https://www.calendly.com" target="_blank"
-                               style="margin-left: 10px; text-decoration: none">
+                               style="margin-left: 5px; text-decoration: none">
                                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-calendly.png"
-                                     width="20"/>
+                                     width="15"/>
                             </a>
                             <a id="zoom" href="https://www.zoom.us" target="_blank"
-                               style="margin-left: 10px; text-decoration: none">
+                               style="margin-left: 5px; text-decoration: none">
                                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-zoom.png"
-                                     width="20"/>
+                                     width="15"/>
                             </a>
                         </td>
                     </tr>
@@ -188,13 +186,14 @@
 
 <script type="text/javascript">
     function set_logo(select) {
-        var element = document.getElementById('logo')
-        element.src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/" + select.value;
+        document.getElementById('logo').src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/" + select.value;
 
         if (select.value === 'logo-artistanywhere.png') {
-            element.height = 25
+            document.getElementById('logo-td').style.paddingTop = '5px';
+            document.getElementById('logo').height = 20;
         } else {
-            element.height = 15
+            document.getElementById('logo-td').style.paddingTop = '2px'
+            document.getElementById('logo').height = 13;
         }
     }
 
