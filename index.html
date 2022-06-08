@@ -6,6 +6,8 @@
 
     <style rel="stylesheet">
         body {
+            font-size: 12px;
+            font-family: 'Arial', 'sans-serif';
             width: 100vw;
             height: 100vh;
             margin: 0;
@@ -20,11 +22,15 @@
             border-right: 1px solid #dddddd;
         }
 
-        #left-bar input {
+        #left-bar input[type="text"] {
             padding: 1em;
             margin-bottom: 2em;
             border: 1px solid #dddddd;
             width: 25em;
+        }
+
+        #left-bar input[type='checkbox'] {
+            margin-bottom: 1em;
         }
 
         #left-bar select {
@@ -67,26 +73,34 @@
         <option value="logo-artistanywhere.png">Artistanywhere</option>
     </select>
 
-    <input placeholder="Full Name" onkeyup="set_name(this)"/>
+    <input type="text" placeholder="Full Name" onkeyup="set_name(this)"/>
 
-    <input placeholder="Job Title" onkeyup="set_designation(this)"/>
+    <input type="text" placeholder="Job Title" onkeyup="set_designation(this)"/>
 
-    <input placeholder="Work Cell" onkeyup="set_phone(this)"/>
+    <input type="text" placeholder="Work Cell" onkeyup="set_phone(this)"/>
 
-    <input placeholder="Work Email" onkeyup="set_email(this)"/>
+    <input type="text" placeholder="Work Email" onkeyup="set_email(this)"/>
 
-    <input placeholder="Website" onkeyup="set_website(this)" value="redesign-group.com"/>
+    <input type="text" placeholder="Website" onkeyup="set_website(this)" value="redesign-group.com"/>
 
-    <input placeholder="Location" onkeyup="set_location(this)" value="United States | Canada | Great Britain | Europe"/>
+    <input type="text" placeholder="Location" onkeyup="set_location(this)"
+           value="United States | Canada | Great Britain | Europe"/>
 
-    <input placeholder="Calendly Profile Link" onkeyup="set_calendly(this)"
-           value="https://www.calendly.com/(your extension)"/>
-
-    <input placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)"
+    <input type="text" placeholder="Linkedin Profile Link" onkeyup="set_linkedin(this)"
            value="https://www.linkedin.com/(your extension)"/>
 
-    <input placeholder="Zoom Link" onkeyup="set_zoom(this)"
+    <label>
+        <input type="checkbox" onchange="toggle_calendly(this)" checked="checked"/>Calendly Icon
+    </label>
+    <input type="text" placeholder="Calendly Profile Link" onkeyup="set_calendly(this)"
+           value="https://www.calendly.com/(your extension)"/>
+
+    <label>
+        <input type="checkbox" onchange="toggle_zoom(this)" checked="checked"/>Zoom Icon
+    </label>
+    <input type="text" placeholder="Zoom Link" onkeyup="set_zoom(this)"
            value="https://www.zoom.us/(your extension)"/>
+
 
     <button id="copy-button" onclick="copy_card()">COPY</button>
 
@@ -98,7 +112,7 @@
            style="background-color: #ffffff; padding: 24px; margin: 12px; box-shadow: 0 0 4px #dddddd; font-family: 'Arial',sans-serif; font-size: 12px">
         <tbody>
         <tr>
-            <td colspan="5" style="padding-bottom: 24px">
+            <td colspan="3" style="padding-bottom: 24px">
                 <table style="width: 100%">
                     <tr>
                         <td id="name" style="font-size: 24px; border-right: 2px solid #dddddd; padding-right: 12px"
@@ -121,21 +135,21 @@
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-phone.png"
                      width="15"/>
             </td>
-            <td id="phone" colspan="4">+1 (123) 456-7890</td>
+            <td id="phone" colspan="2">+1 (123) 456-7890</td>
         </tr>
         <tr>
             <td>
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-mail.png"
                      width="15"/>
             </td>
-            <td id="email" colspan="4">demo@redesign-group.com</td>
+            <td id="email" colspan="2">demo@redesign-group.com</td>
         </tr>
         <tr>
             <td>
                 <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-website.png"
                      width="15"/>
             </td>
-            <td id="website" colspan="4">redesign-group.com</td>
+            <td id="website" colspan="2">redesign-group.com</td>
         </tr>
         <tr>
             <td>
@@ -143,20 +157,19 @@
                      width="15"/>
             </td>
             <td id="location">United States | Canada | Great Britain | Europe</td>
-            <td style="text-align: right; width: 25px">
-                <a id="calendly" href="https://www.calendly.com" target="_blank">
-                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-calendly.png"
-                         width="20"/>
-                </a>
-            </td>
-            <td style="text-align: right; width: 25px">
-                <a id="linkedin" href="https://www.linkedin.com" target="_blank">
+            <td style="text-align: right;">
+                <a id="linkedin" href="https://www.linkedin.com" target="_blank"
+                   style="margin-left: 20px; text-decoration: none">
                     <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-linkedin.png"
                          width="20"/>
                 </a>
-            </td>
-            <td style="text-align: right; width: 25px">
-                <a id="zoom" href="https://www.zoom.us" target="_blank">
+                <a id="calendly" href="https://www.calendly.com" target="_blank"
+                   style="margin-left: 10px; text-decoration: none">
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-calendly.png"
+                         width="20"/>
+                </a>
+                <a id="zoom" href="https://www.zoom.us" target="_blank"
+                   style="margin-left: 10px; text-decoration: none">
                     <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-zoom.png"
                          width="20"/>
                 </a>
@@ -212,6 +225,22 @@
 
     function set_zoom(input) {
         document.getElementById('zoom').href = input.value
+    }
+
+    function toggle_calendly(input) {
+        if (input.checked) {
+            document.getElementById('calendly').style.display = ''
+        } else {
+            document.getElementById('calendly').style.display = 'none'
+        }
+    }
+
+    function toggle_zoom(input) {
+        if (input.checked) {
+            document.getElementById('zoom').style.display = ''
+        } else {
+            document.getElementById('zoom').style.display = 'none'
+        }
     }
 
     function copy_card() {
