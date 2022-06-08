@@ -39,26 +39,6 @@
             padding: 2em;
         }
 
-        #card {
-            background-color: white;
-            padding: 3em;
-            margin: 2em;
-            box-shadow: 0 0 2px #ddd;
-        }
-
-        #name {
-            font-size: x-large;
-            border-right: 1px solid #dddddd;
-            padding-right: 0.5em;
-        }
-
-        #designation {
-            font-size: large;
-            color: #aaaaaa;
-            padding-left: 0.5em;
-            padding-right: 4em;
-        }
-
         #copy-button {
             padding: 1em;
             border: none;
@@ -83,10 +63,10 @@
 
 <div id="left-bar" class="flex-column">
     <select onchange="set_logo(this)">
-        <option value="logo-redesign.svg" selected="selected">Redesign Group</option>
-        <option value="logo-redesign-trust.svg">Redesign Trust</option>
-        <option value="logo-redesign-it.svg">Redesign IT</option>
-        <option value="logo-artistanywhere.svg">Artistanywhere</option>
+        <option value="logo-redesign.png" selected="selected">Redesign Group</option>
+        <option value="logo-redesign-trust.png">Redesign Trust</option>
+        <option value="logo-redesign-it.png">Redesign IT</option>
+        <option value="logo-artistanywhere.png">Artistanywhere</option>
     </select>
 
     <input placeholder="Full Name" onkeyup="set_name(this)"/>
@@ -116,17 +96,21 @@
 
 <div id="right-bar">
 
-    <table id="card">
+    <table id="card" style="background-color: #ffffff; padding: 24px; margin: 12px; box-shadow: 0 0 4px #dddddd">
         <tbody>
         <tr>
-            <td colspan="5" style="padding-bottom: 2em">
+            <td colspan="5" style="padding-bottom: 24px">
                 <table>
                     <tr>
-                        <td id="name" colspan="2">Demo User</td>
-                        <td id="designation">CEO</td>
+                        <td id="name" style="font-size: 24px; border-right: 2px solid #dddddd; padding-right: 12px"
+                            colspan="2">Demo User
+                        </td>
+                        <td id="designation"
+                            style="font-size: 18px; color: #aaaaaa; padding-left: 12px; padding-right: 50px">CEO
+                        </td>
                         <td>
                             <img id="logo"
-                                 src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/logo-redesign.svg"
+                                 src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/logo-redesign.png"
                                  height="15"/>
                         </td>
                     </tr>
@@ -135,46 +119,46 @@
         </tr>
         <tr>
             <td style="width: 20px">
-                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-phone.svg"
+                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-phone.png"
                      width="15"/>
             </td>
             <td id="phone" colspan="4">+1 (123) 456-7890</td>
         </tr>
         <tr>
             <td>
-                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-mail.svg"
+                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-mail.png"
                      width="15"/>
             </td>
             <td id="email" colspan="4">demo@redesign-group.com</td>
         </tr>
         <tr>
             <td>
-                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-website.svg"
+                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-website.png"
                      width="15"/>
             </td>
             <td id="website" colspan="4">redesign-group.com</td>
         </tr>
         <tr>
             <td>
-                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-location.svg"
+                <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-location.png"
                      width="15"/>
             </td>
             <td id="location">United States | Canada | Great Britain | Europe</td>
             <td style="text-align: right; width: 25px">
                 <a id="calendly" href="https://www.calendly.com" target="_blank">
-                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-calendly.svg"
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-calendly.png"
                          width="20"/>
                 </a>
             </td>
             <td style="text-align: right; width: 25px">
                 <a id="linkedin" href="https://www.linkedin.com" target="_blank">
-                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-linkedin.svg"
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-linkedin.png"
                          width="20"/>
                 </a>
             </td>
             <td style="text-align: right; width: 25px">
                 <a id="zoom" href="https://www.zoom.us" target="_blank">
-                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/icon-zoom.svg"
+                    <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-zoom.png"
                          width="20"/>
                 </a>
             </td>
@@ -186,9 +170,9 @@
 <script type="text/javascript">
     function set_logo(select) {
         var element = document.getElementById('logo')
-        element.src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/" + select.value;
+        element.src = "https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/" + select.value;
 
-        if (select.value === 'logo-artistanywhere.svg') {
+        if (select.value === 'logo-artistanywhere.png') {
             element.height = 25
         } else {
             element.height = 15
