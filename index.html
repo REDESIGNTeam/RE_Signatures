@@ -171,8 +171,9 @@
                                         <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-website.png"
                                              alt="website" height="14"/>
                                     </td>
-                                    <td id="website" style="padding-left: 10px">
-                                        redesign-group.com
+                                    <td style="padding-left: 10px">
+                                        <a id="website" href="https://redesign-group.com"
+                                           style="text-decoration: none; color: black">redesign-group.com</a>
                                     </td>
                                 </tr>
                             </table>
@@ -251,7 +252,8 @@
     }
 
     function set_website(input) {
-        document.getElementById('website').innerText = input.value
+        document.getElementById('website').innerText = input.value;
+        document.getElementById('website').href = "https://" + input.value;
     }
 
     function set_location(input) {
