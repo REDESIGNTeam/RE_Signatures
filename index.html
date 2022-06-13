@@ -186,26 +186,28 @@
                                     </td>
 
                                     <td id="location"
-                                        style="padding-left: 10px; white-space: nowrap;font-size: 12px;">United States | Canada | Great Britain | Europe</td>
-
-                                    <td style="text-align: right; width: 20px">
-                                        <a id="linkedin" href="https://www.linkedin.com" target="_blank">
-                                            <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-linkedin.png"
-                                                 alt="linkdin" width="15"/>
-                                        </a>
+                                        style="padding-left: 10px; white-space: nowrap;font-size: 12px;">United States |
+                                        Canada | Great Britain | Europe
                                     </td>
 
-                                    <td style="text-align: right; width: 20px">
+                                    <td style="text-align: right; width: 20px" id="calendly-td">
                                         <a id="calendly" href="https://www.calendly.com" target="_blank">
                                             <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-calendly.png"
                                                  alt="calendly" width="15"/>
                                         </a>
                                     </td>
 
-                                    <td style="text-align: right; width: 20px">
+                                    <td style="text-align: right; width: 20px" id="zoom-td">
                                         <a id="zoom" href="https://www.zoom.com" target="_blank">
                                             <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-zoom.png"
                                                  alt="zoom" height="15"/>
+                                        </a>
+                                    </td>
+
+                                    <td style="text-align: right; width: 20px" id="linkedin-td">
+                                        <a id="linkedin" href="https://www.linkedin.com" target="_blank">
+                                            <img src="https://raw.githubusercontent.com/REDESIGNTeam/RE_Signatures/main/assets/png/icon-linkedin.png"
+                                                 alt="linkdin" width="15"/>
                                         </a>
                                     </td>
                                 </tr>
@@ -269,17 +271,17 @@
 
     function toggle_calendly(input) {
         if (input.checked) {
-            document.getElementById('calendly').style.display = ''
+            document.getElementById('calendly-td').style.display = ''
         } else {
-            document.getElementById('calendly').style.display = 'none'
+            document.getElementById('calendly-td').style.display = 'none'
         }
     }
 
     function toggle_zoom(input) {
         if (input.checked) {
-            document.getElementById('zoom').style.display = ''
+            document.getElementById('zoom-td').style.display = ''
         } else {
-            document.getElementById('zoom').style.display = 'none'
+            document.getElementById('zoom-td').style.display = 'none'
         }
     }
 
